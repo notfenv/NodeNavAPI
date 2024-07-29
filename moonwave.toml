@@ -1,0 +1,11 @@
+title = "Node Navigator"
+
+[home]
+enabled = true
+includeReadme = false
+
+[docusaurus]
+tagline = "Custom node-based pathfinding for Roblox"
+
+organizationName = "notfenv"
+projectName = "Trinomial Interactive"

@@ -295,7 +295,7 @@ end
 	Example Usage of what I wrote for [HELLMET by Sensei_Developer](https://www.roblox.com/games/13815196156/HELLMET):
 	```lua
 	-- Get exit node before anything else; dont want to have the exit node as one of the nodes in the room
-	local exitNode = navigator:GetNodesInBox(v.prefabRoom)[1]
+	local exitNode = navigator:GetNodesInBox(v.ExitArea)[1]
 
 	-- Instantiate room sub-graph onto main nodegraph. This is basically an alt version of the nodegraph parser
 	local roomNodes = {}

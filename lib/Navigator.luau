@@ -372,11 +372,11 @@ end
 	Example Usage of what I wrote for [HELLMET by Sensei_Developer](https://www.roblox.com/games/13815196156/HELLMET):
 	```lua
 	-- Get exit node before anything else; dont want to have the exit node as one of the nodes in the room
-	local exitNode = navigator:GetNodesInBox(v.ExitArea)[1]
+	local exitNode = navigator:GetNodesInBox(prefabRoom.ExitArea)[1]
 
 	-- Instantiate room sub-graph onto main nodegraph. This is basically an alt version of the nodegraph parser
 	local roomNodes = {}
-	for _,node in v.NodeGraph.Nodes:GetChildren() do
+	for _,node in prefabRoom.NodeGraph.Nodes:GetChildren() do
 		if node:IsA("BasePart") then
 			-- Keep track of the old node name for building connections on main graph
 			-- This is so that we can refer to the nodes on the main graph with the sub-graph's nodes
@@ -386,7 +386,7 @@ end
 	end
 
 	-- Re-build edges
-	for _,edge in v.NodeGraph.Edges:GetChildren() do
+	for _,edge in prefabRoom.NodeGraph.Edges:GetChildren() do
 		if edge:IsA("Constraint") or edge:IsA("Beam") then
 			local delimiter = edge.Name:gmatch("%d+")
 			local startId, targetId = delimiter(), delimiter()
@@ -397,7 +397,7 @@ end
 	-- OK, now connect the exiting/entrance nodes
 	-- The exit node is the way in and out of the room pretty much
 	if exitNode then
-		navigator:ConnectNodes(roomNodes[v.EnterNode.Value.Name], exitNode)
+		navigator:ConnectNodes(roomNodes[prefabRoom.EnterNode.Value.Name], exitNode)
 	else
 		warn("Couldnt find exit node")
 	end

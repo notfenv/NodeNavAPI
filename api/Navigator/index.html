@@ -36,8 +36,8 @@ There are currently three types of Node Connectors:
 
 &quot;One-Way Connector&quot; - A connector where the AI can only move to it&#x27;s target node in the direction of it&#x27;s visual indicator,
 	and not back. Visualized as a Beam with an arrows texture, where the direction of the arrows is the direction of movement."><link data-rh="true" rel="canonical" href="https://notfenv.github.io/NodeNavAPI/api/Navigator"><link data-rh="true" rel="alternate" href="https://notfenv.github.io/NodeNavAPI/api/Navigator" hreflang="en"><link data-rh="true" rel="alternate" href="https://notfenv.github.io/NodeNavAPI/api/Navigator" hreflang="x-default"><link rel="stylesheet" href="/NodeNavAPI/assets/css/styles.e1adec2f.css">
-<link rel="preload" href="/NodeNavAPI/assets/js/runtime~main.ed04bdc6.js" as="script">
-<link rel="preload" href="/NodeNavAPI/assets/js/main.50863752.js" as="script">
+<link rel="preload" href="/NodeNavAPI/assets/js/runtime~main.e06a75db.js" as="script">
+<link rel="preload" href="/NodeNavAPI/assets/js/main.871b3894.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -64,11 +64,72 @@ There are currently three types of Node Connectors:
   "One-Way Connector" - A connector where the AI can only move to it's target node in the direction of it's visual indicator,
   and not back. Visualized as a Beam with an arrows texture, where the direction of the arrows is the direction of movement.
 </p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Parse"><code style="text-decoration:none">Parse</code><a href="#Parse" class="hash-link" aria-label="Direct link to Parse" title="Direct link to Parse">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L98"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">Parse</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>nodeGraph<!-- -->: </code><code class="blue_P4bS">NodeGraph</code><span class="inlineDescription_G7Er">-- <span>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="NavigateParams"><code style="text-decoration:none">NavigateParams</code><a href="#NavigateParams" class="hash-link" aria-label="Direct link to NavigateParams" title="Direct link to NavigateParams">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L561"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>NavigateParams<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>Humanoid<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Humanoid" target="_blank" rel="noopener noreferrer">Humanoid<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The humanoid to use for navigating</p>
+</span></span></div><div><code>ComputePath<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/PathWaypoint" target="_blank" rel="noopener noreferrer">PathWaypoint<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>A function that computes the path</p>
+</span></span></div><div><code>CancelCondition<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>An OPTIONAL function that when returned <code>true</code>, will cancel the navigating.</p>
+</span></span></div><div><code>OnRecompute(newPathfinder:<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator#Pathfinder">Pathfinder)</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>An OPTIONAL function that is called with the pathfinder whenever the navigator retries</p>
+</span></span></div><div><code>OnNextWaypoint<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>An OPTIONAL function that is called on the waypoint the humanoid is currently navigating to.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>Params for using <code>Navigator:PathfindHumanoid</code></p>
+<pre class="language-lua"><code class="language-lua">pathfinder <span class="token operator">=</span> Navigator<span class="token punctuation">:</span><span class="token function">PathfindHumanoid</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	<span class="token comment">-- Note that everything beyond beyond `ComputePath` is optional.</span>
+	Humanoid <span class="token operator">=</span> myNpcHumanoid<span class="token punctuation">,</span>
+	ComputePath <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token comment">-- if you want to have some computation middleware or you want to use a different method</span>
+		<span class="token keyword">local</span> success<span class="token punctuation">,</span> path <span class="token operator">=</span> Navigator<span class="token punctuation">:</span><span class="token function">TryComputePath</span><span class="token punctuation">(</span>myNpcRootPart<span class="token punctuation">.</span>Position<span class="token punctuation">,</span> goalPosition<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">if</span> success <span class="token keyword">then</span>
+			<span class="token keyword">return</span> path<span class="token punctuation">:</span><span class="token function">GetWaypoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">else</span>
+			<span class="token comment">-- You could also try falling back to Roblox's nav-mesh pathfinding as a result of this</span>
+			<span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">"Couldnt compute path"</span><span class="token punctuation">,</span> path<span class="token punctuation">)</span> <span class="token comment">-- `path` should be the fail reason here</span>
+			<span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+		<span class="token keyword">end</span>
+	<span class="token keyword">end</span><span class="token punctuation">,</span>
+	CancelCondition <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token comment">-- If you want to cancel pathfinding whenever the NPC gets a target or dies for example</span>
+		<span class="token keyword">return</span> myNpcHumanoid<span class="token punctuation">.</span>Health <span class="token operator">&#x3C;=</span> <span class="token number">0</span> <span class="token keyword">or</span> myNpc<span class="token punctuation">:</span><span class="token function">GetAttribute</span><span class="token punctuation">(</span><span class="token string">"HasTarget"</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span><span class="token punctuation">,</span>
+	OnRecompute <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>newPathfinder<span class="token punctuation">)</span>
+		<span class="token comment">-- If the graph ever changes, it will try to recompute the path</span>
+		<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"our graph was updated, trying to pathfind again"</span><span class="token punctuation">)</span>
+
+		<span class="token comment">-- so if you want to keep track of the new pathfinder and be cancel it externally, you can re-assign it here</span>
+		pathfinder <span class="token operator">=</span> newPathfinder
+	<span class="token keyword">end</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Pathfinder"><code style="text-decoration:none">Pathfinder</code><a href="#Pathfinder" class="hash-link" aria-label="Direct link to Pathfinder" title="Direct link to Pathfinder">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L578"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>Pathfinder<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>thread<!-- -->: </code><code class="blue_P4bS">thread</code><span class="inlineDescription_G7Er">-- <span>
+<p>The pathfinding task/thread.</p>
+</span></span></div><div><code>cancelled<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>If the pathfinding job was cancelled.</p>
+</span></span></div><div><code>complete<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>If the pathfinding job is complete.</p>
+</span></span></div><div><code>currentWaypoint<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>The current target waypoint that the NPC is navigating towards.</p>
+</span></span></div><div><code>close<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>A function that will cancel the pathfinding job.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>The pathfinding job returned by <code>Navigator:PathfindHumanoid</code>.</p>
+<div class="admonition admonition-caution alert alert--warning">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path>
+        </svg></span>caution</h5>
+  </div>
+  <div class="admonition-content">
+    <p>Use <code>pathfinder.close()</code> to cancel the pathfinder. Never close <code>pathfinder.thread</code> on its own.</p>
+  </div>
+</div>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Parse"><code style="text-decoration:none">Parse</code><a href="#Parse" class="hash-link" aria-label="Direct link to Parse" title="Direct link to Parse">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L119"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">Parse</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>nodeGraph<!-- -->: </code><code class="blue_P4bS">NodeGraph</code><span class="inlineDescription_G7Er">-- <span>
 <p>The new node graph.</p>
 </span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Changes the navigator's graph, rebuilding the grid.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TryComputePath"><code style="text-decoration:none">TryComputePath</code><a href="#TryComputePath" class="hash-link" aria-label="Direct link to TryComputePath" title="Direct link to TryComputePath">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L141"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">TryComputePath</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>startPoint<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="TryComputePath"><code style="text-decoration:none">TryComputePath</code><a href="#TryComputePath" class="hash-link" aria-label="Direct link to TryComputePath" title="Direct link to TryComputePath">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L162"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">TryComputePath</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>startPoint<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The pathfinding origin.</p>
 </span></span></div><div><code>targetPoint<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The pathfinding destination.</p>
@@ -90,7 +151,7 @@ There are currently three types of Node Connectors:
 	path<span class="token punctuation">:</span><span class="token function">Visualize</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">end</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">catch</span><span class="token punctuation">(</span>warn<span class="token punctuation">)</span>
 </code></pre>
-</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetEdgeNear"><code style="text-decoration:none">GetEdgeNear</code><a href="#GetEdgeNear" class="hash-link" aria-label="Direct link to GetEdgeNear" title="Direct link to GetEdgeNear">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L210"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetEdgeNear</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>position<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetEdgeNear"><code style="text-decoration:none">GetEdgeNear</code><a href="#GetEdgeNear" class="hash-link" aria-label="Direct link to GetEdgeNear" title="Direct link to GetEdgeNear">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L231"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetEdgeNear</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>position<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>Where to look for a nearby edge.</p>
 </span></span></div><div><code>maxRadius<!-- -->: </code><code class="blue_P4bS">number?</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The maximum distance to check for nearby edges. Default = 100</p>
@@ -120,7 +181,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
     </p>
   </div>
 </div>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetEdgesInBox"><code style="text-decoration:none">GetEdgesInBox</code><a href="#GetEdgesInBox" class="hash-link" aria-label="Direct link to GetEdgesInBox" title="Direct link to GetEdgesInBox">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L249"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetEdgesInBox</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>box<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">BoxParam</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetEdgesInBox"><code style="text-decoration:none">GetEdgesInBox</code><a href="#GetEdgesInBox" class="hash-link" aria-label="Direct link to GetEdgesInBox" title="Direct link to GetEdgesInBox">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L265"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetEdgesInBox</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>box<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">BoxParam</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The param for spatial querying</p>
 </span></span></div><div><code>filterFn<!-- -->: </code><code class="purple_ieR2">(</code><code>edge<!-- -->: </code><code class="blue_P4bS">Edge</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>An optional edge-by-edge filtering function, where if the returned condition is false, that in-box edge will not be appended.</p>
@@ -136,7 +197,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
 	edge<span class="token punctuation">.</span><span class="token function">SetEnabled</span><span class="token punctuation">(</span><span class="token keyword">false</span><span class="token punctuation">)</span> <span class="token comment">-- Don't allow pathfinding through `edgeDisableRegion`</span>
 <span class="token keyword">end</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ConnectNodes"><code style="text-decoration:none">ConnectNodes</code><a href="#ConnectNodes" class="hash-link" aria-label="Direct link to ConnectNodes" title="Direct link to ConnectNodes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L332"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">ConnectNodes</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>startNode<!-- -->: </code><code class="blue_P4bS">GraphNode</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ConnectNodes"><code style="text-decoration:none">ConnectNodes</code><a href="#ConnectNodes" class="hash-link" aria-label="Direct link to ConnectNodes" title="Direct link to ConnectNodes">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L348"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">ConnectNodes</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>startNode<!-- -->: </code><code class="blue_P4bS">GraphNode</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The starting node (the order doesn't matter UNLESS it's a one-way edge)</p>
 </span></span></div><div><code>targetNode<!-- -->: </code><code class="blue_P4bS">GraphNode</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The target node (the order doesn't matter UNLESS it's a one-way edge)</p>
@@ -202,7 +263,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
 </code></pre>
   </div>
 </div>
-</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PlaceNodeAt"><code style="text-decoration:none">PlaceNodeAt</code><a href="#PlaceNodeAt" class="hash-link" aria-label="Direct link to PlaceNodeAt" title="Direct link to PlaceNodeAt">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L409"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">PlaceNodeAt</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>position<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PlaceNodeAt"><code style="text-decoration:none">PlaceNodeAt</code><a href="#PlaceNodeAt" class="hash-link" aria-label="Direct link to PlaceNodeAt" title="Direct link to PlaceNodeAt">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L425"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">PlaceNodeAt</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>position<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The position of the node.</p>
 </span></span></div><div><code>index<!-- -->: </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The index/name of the node. If not supplied, will use the next available node index.</p>
@@ -261,7 +322,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
 </code></pre>
   </div>
 </div>
-</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetNodeWithIndex"><code style="text-decoration:none">GetNodeWithIndex</code><a href="#GetNodeWithIndex" class="hash-link" aria-label="Direct link to GetNodeWithIndex" title="Direct link to GetNodeWithIndex">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L438"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetNodeWithIndex</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>index<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetNodeWithIndex"><code style="text-decoration:none">GetNodeWithIndex</code><a href="#GetNodeWithIndex" class="hash-link" aria-label="Direct link to GetNodeWithIndex" title="Direct link to GetNodeWithIndex">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L454"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetNodeWithIndex</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>index<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The index of the node to find</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">GraphNode?</code><span class="inlineDescription_G7Er">-- <span>
 <p>The node with the matching index</p>
@@ -270,7 +331,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
   Finds a node with a specified index/name.
   Useful if you want to seek two nodes and connect them together.
 </p>
-</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr><tr><td>&quot;Invalid index (expected string, got {X})&quot;</td><td>Index MUST be a string.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetNodeNear"><code style="text-decoration:none">GetNodeNear</code><a href="#GetNodeNear" class="hash-link" aria-label="Direct link to GetNodeNear" title="Direct link to GetNodeNear">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L457"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetNodeNear</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>position<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><h3>Errors</h3><table class="errorTable_jfN8"><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>&quot;No network bound. Did you forget to call :Parse()?&quot;</td><td>A node graph wasn&#x27;t parsed.</td></tr><tr><td>&quot;Invalid index (expected string, got {X})&quot;</td><td>Index MUST be a string.</td></tr></tbody></table><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetNodeNear"><code style="text-decoration:none">GetNodeNear</code><a href="#GetNodeNear" class="hash-link" aria-label="Direct link to GetNodeNear" title="Direct link to GetNodeNear">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L473"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetNodeNear</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>position<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>Where to look for a nearby node.</p>
 </span></span></div><div><code>maxRadius<!-- -->: </code><code class="blue_P4bS">number?</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The maximum distance to check for nearby node. Default = 100</p>
@@ -280,7 +341,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
 <p>The nearest node</p>
 </span></span></div><div>
 <p>Finds and returns the nearest node to <code>position</code>.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetNodesInBox"><code style="text-decoration:none">GetNodesInBox</code><a href="#GetNodesInBox" class="hash-link" aria-label="Direct link to GetNodesInBox" title="Direct link to GetNodesInBox">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L483"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetNodesInBox</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>box<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">BoxParam</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetNodesInBox"><code style="text-decoration:none">GetNodesInBox</code><a href="#GetNodesInBox" class="hash-link" aria-label="Direct link to GetNodesInBox" title="Direct link to GetNodesInBox">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L499"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">GetNodesInBox</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>box<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS">BoxParam</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The param for spatial querying</p>
 </span></span></div><div><code>filterFn<!-- -->: </code><code class="purple_ieR2">(</code><code>node<!-- -->: </code><code class="blue_P4bS">GraphNode</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>An optional node-by-node filtering function, where if the returned condition is false, that in-box node will not be appended.</p>
@@ -288,6 +349,60 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
 <p>The nodes in the specified box region</p>
 </span></span></div><div>
 <p>Finds and returns the nodes inside of a part or given bounds.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PathfindHumanoid"><code style="text-decoration:none">PathfindHumanoid</code><a href="#PathfindHumanoid" class="hash-link" aria-label="Direct link to PathfindHumanoid" title="Direct link to PathfindHumanoid">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/NodeNavAPI/blob/master/lib/Navigator.luau#L625"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Navigator<!-- -->.</code><code class="green_DgR4">PathfindHumanoid</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator">Navigator</a></code><code>,</code></div><div><code>param<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/NodeNavAPI/api/Navigator#NavigateParams">NavigateParams</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The navigation parameters</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Indicating if the pathfind was a success or a fail.</p>
+</span></span></div><div>
+<p>
+  A baseline pathfinder that moves the <code>Humanoid</code> along a generated path.
+  Example usage:
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> Navigator <span class="token operator">=</span> Navigator<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">local</span> pathfinder
+
+pathfinder <span class="token operator">=</span> Navigator<span class="token punctuation">:</span><span class="token function">PathfindHumanoid</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	<span class="token comment">-- Note that everything beyond beyond `ComputePath` is optional.</span>
+	Humanoid <span class="token operator">=</span> myNpcHumanoid<span class="token punctuation">,</span>
+	ComputePath <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token comment">-- if you want to have some computation middleware or you want to use a different method</span>
+		<span class="token keyword">local</span> success<span class="token punctuation">,</span> path <span class="token operator">=</span> Navigator<span class="token punctuation">:</span><span class="token function">TryComputePath</span><span class="token punctuation">(</span>myNpcRootPart<span class="token punctuation">.</span>Position<span class="token punctuation">,</span> goalPosition<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">await</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">if</span> success <span class="token keyword">then</span>
+			<span class="token keyword">return</span> path<span class="token punctuation">:</span><span class="token function">GetWaypoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">else</span>
+			<span class="token comment">-- You could also try falling back to Roblox's nav-mesh pathfinding as a result of this</span>
+			<span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">"Couldnt compute path"</span><span class="token punctuation">,</span> path<span class="token punctuation">)</span> <span class="token comment">-- `path` should be the fail reason here</span>
+			<span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+		<span class="token keyword">end</span>
+	<span class="token keyword">end</span><span class="token punctuation">,</span>
+	CancelCondition <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token comment">-- If you want to cancel pathfinding whenever the NPC gets a target or dies for example</span>
+		<span class="token keyword">return</span> myNpcHumanoid<span class="token punctuation">.</span>Health <span class="token operator">&#x3C;=</span> <span class="token number">0</span> <span class="token keyword">or</span> myNpc<span class="token punctuation">:</span><span class="token function">GetAttribute</span><span class="token punctuation">(</span><span class="token string">"HasTarget"</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span><span class="token punctuation">,</span>
+	OnRecompute <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>newPathfinder<span class="token punctuation">)</span>
+		<span class="token comment">-- If the graph ever changes, it will try to recompute the path</span>
+		<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"our graph was updated, trying to pathfind again"</span><span class="token punctuation">)</span>
+
+		<span class="token comment">-- so if you want to keep track of the new pathfinder and be cancel it externally, you can re-assign it here</span>
+		pathfinder <span class="token operator">=</span> newPathfinder
+	<span class="token keyword">end</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<div class="admonition admonition-tip alert alert--success">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+          <path d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path>
+        </svg></span>tip</h5>
+  </div>
+  <div class="admonition-content">
+    <p>
+      The pathfinder will automatically recompute should the node graph change in any way (such as edges being disabled due to obstructions)
+      For example, if the closest path runs through a hallway, and that hallway suddenly gets blocked off mid-path, the NPC will automatically
+      recompute the path and find another way around, if there is one.
+    </p>
+  </div>
+</div>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
@@ -303,7 +418,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 73,
+                &quot;line&quot;: 94,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -325,7 +440,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 98,
+                &quot;line&quot;: 119,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -373,7 +488,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
                 }
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 141,
+                &quot;line&quot;: 162,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -410,7 +525,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 210,
+                &quot;line&quot;: 231,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -442,7 +557,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 249,
+                &quot;line&quot;: 265,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -490,7 +605,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
                 }
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 332,
+                &quot;line&quot;: 348,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -528,7 +643,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
                 }
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 409,
+                &quot;line&quot;: 425,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -565,7 +680,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
                 }
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 438,
+                &quot;line&quot;: 454,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -602,7 +717,7 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 457,
+                &quot;line&quot;: 473,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         },
@@ -634,21 +749,119 @@ edge<span class="token punctuation">.</span><span class="token function">SetEnab
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 483,
+                &quot;line&quot;: 499,
+                &quot;path&quot;: &quot;lib/Navigator.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;PathfindHumanoid&quot;,
+            &quot;desc&quot;: &quot;A baseline pathfinder that moves the `Humanoid` along a generated path.\nExample usage:\n```lua\nlocal Navigator = Navigator.Get()\n\nlocal pathfinder\n\npathfinder = Navigator:PathfindHumanoid({\n\t-- Note that everything beyond beyond `ComputePath` is optional.\n\tHumanoid = myNpcHumanoid,\n\tComputePath = function()\n\t\t-- if you want to have some computation middleware or you want to use a different method\n\t\tlocal success, path = Navigator:TryComputePath(myNpcRootPart.Position, goalPosition):await()\n\t\tif success then\n\t\t\treturn path:GetWaypoints()\n\t\telse\n\t\t\t-- You could also try falling back to Roblox&#x27;s nav-mesh pathfinding as a result of this\n\t\t\twarn(\&quot;Couldnt compute path\&quot;, path) -- `path` should be the fail reason here\n\t\t\treturn {}\n\t\tend\n\tend,\n\tCancelCondition = function()\n\t\t-- If you want to cancel pathfinding whenever the NPC gets a target or dies for example\n\t\treturn myNpcHumanoid.Health &lt;= 0 or myNpc:GetAttribute(\&quot;HasTarget\&quot;)\n\tend,\n\tOnRecompute = function(newPathfinder)\n\t\t-- If the graph ever changes, it will try to recompute the path\n\t\tprint(\&quot;our graph was updated, trying to pathfind again\&quot;)\n\n\t\t-- so if you want to keep track of the new pathfinder and be cancel it externally, you can re-assign it here\n\t\tpathfinder = newPathfinder\n\tend,\n})\n```\n\n:::tip\nThe pathfinder will automatically recompute should the node graph change in any way (such as edges being disabled due to obstructions)\nFor example, if the closest path runs through a hallway, and that hallway suddenly gets blocked off mid-path, the NPC will automatically\nrecompute the path and find another way around, if there is one.\n:::&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Navigator&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;param&quot;,
+                    &quot;desc&quot;: &quot;The navigation parameters&quot;,
+                    &quot;lua_type&quot;: &quot;NavigateParams&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Indicating if the pathfind was a success or a fail.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 625,
                 &quot;path&quot;: &quot;lib/Navigator.luau&quot;
             }
         }
     ],
     &quot;properties&quot;: [],
-    &quot;types&quot;: [],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;NavigateParams&quot;,
+            &quot;desc&quot;: &quot;Params for using `Navigator:PathfindHumanoid`\n```lua\npathfinder = Navigator:PathfindHumanoid({\n\t-- Note that everything beyond beyond `ComputePath` is optional.\n\tHumanoid = myNpcHumanoid,\n\tComputePath = function()\n\t\t-- if you want to have some computation middleware or you want to use a different method\n\t\tlocal success, path = Navigator:TryComputePath(myNpcRootPart.Position, goalPosition):await()\n\t\tif success then\n\t\t\treturn path:GetWaypoints()\n\t\telse\n\t\t\t-- You could also try falling back to Roblox&#x27;s nav-mesh pathfinding as a result of this\n\t\t\twarn(\&quot;Couldnt compute path\&quot;, path) -- `path` should be the fail reason here\n\t\t\treturn {}\n\t\tend\n\tend,\n\tCancelCondition = function()\n\t\t-- If you want to cancel pathfinding whenever the NPC gets a target or dies for example\n\t\treturn myNpcHumanoid.Health &lt;= 0 or myNpc:GetAttribute(\&quot;HasTarget\&quot;)\n\tend,\n\tOnRecompute = function(newPathfinder)\n\t\t-- If the graph ever changes, it will try to recompute the path\n\t\tprint(\&quot;our graph was updated, trying to pathfind again\&quot;)\n\n\t\t-- so if you want to keep track of the new pathfinder and be cancel it externally, you can re-assign it here\n\t\tpathfinder = newPathfinder\n\tend,\n})\n```&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Humanoid&quot;,
+                    &quot;lua_type&quot;: &quot;Humanoid&quot;,
+                    &quot;desc&quot;: &quot;The humanoid to use for navigating&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ComputePath&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; { PathWaypoint }&quot;,
+                    &quot;desc&quot;: &quot;A function that computes the path&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;CancelCondition&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; boolean&quot;,
+                    &quot;desc&quot;: &quot;An OPTIONAL function that when returned `true`, will cancel the navigating.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;OnRecompute(newPathfinder:&quot;,
+                    &quot;lua_type&quot;: &quot;Pathfinder)&quot;,
+                    &quot;desc&quot;: &quot;An OPTIONAL function that is called with the pathfinder whenever the navigator retries&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;OnNextWaypoint&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;An OPTIONAL function that is called on the waypoint the humanoid is currently navigating to.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 561,
+                &quot;path&quot;: &quot;lib/Navigator.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Pathfinder&quot;,
+            &quot;desc&quot;: &quot;The pathfinding job returned by `Navigator:PathfindHumanoid`.\n:::caution\nUse `pathfinder.close()` to cancel the pathfinder. &lt;b&gt;Never close `pathfinder.thread` on its own.&lt;/b&gt;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;thread&quot;,
+                    &quot;lua_type&quot;: &quot;thread&quot;,
+                    &quot;desc&quot;: &quot;The pathfinding task/thread.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cancelled&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;If the pathfinding job was cancelled.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;complete&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;If the pathfinding job is complete.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;currentWaypoint&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;The current target waypoint that the NPC is navigating towards.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;close&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;A function that will cancel the pathfinding job.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 578,
+                &quot;path&quot;: &quot;lib/Navigator.luau&quot;
+            }
+        }
+    ],
     &quot;name&quot;: &quot;Navigator&quot;,
     &quot;desc&quot;: &quot;A node navigation class that allows for node pathfinding with various different pathfinding algorithms.\nUsed with a graph/navigation network.\n\nUse `Navigator.OnGraphUpdated` to listen for whenever the graph is manipulated (example: an edge is toggled)\n\n\&quot;Nodes\&quot; are the points that the AI traverse to.\n\&quot;Connectors\&quot; are the connections between Nodes, marking which nodes the AI\n\tcan go to, from the current Node.\n\nThere are currently three types of Node Connectors:\n\&quot;Edge Connector\&quot; - A normal, bidirectional movement connector. Visualized as a line\n\n\&quot;Jump Connector\&quot; - A connector where if the AI has to traverse 2 nodes connected by a Jump Connector,\n\tthe AI should jump. Visualized as a spring.\n\n\&quot;One-Way Connector\&quot; - A connector where the AI can only move to it&#x27;s target node in the direction of it&#x27;s visual indicator,\n\tand not back. Visualized as a Beam with an arrows texture, where the direction of the arrows is the direction of movement.&quot;,
     &quot;source&quot;: {
-        &quot;line&quot;: 60,
+        &quot;line&quot;: 81,
         &quot;path&quot;: &quot;lib/Navigator.luau&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#ConnectNodes" class="table-of-contents__link toc-highlight">.ConnectNodes</a></li><li><a href="#GetEdgeNear" class="table-of-contents__link toc-highlight">.GetEdgeNear</a></li><li><a href="#GetEdgesInBox" class="table-of-contents__link toc-highlight">.GetEdgesInBox</a></li><li><a href="#GetNodeNear" class="table-of-contents__link toc-highlight">.GetNodeNear</a></li><li><a href="#GetNodesInBox" class="table-of-contents__link toc-highlight">.GetNodesInBox</a></li><li><a href="#GetNodeWithIndex" class="table-of-contents__link toc-highlight">.GetNodeWithIndex</a></li><li><a href="#Parse" class="table-of-contents__link toc-highlight">.Parse</a></li><li><a href="#PlaceNodeAt" class="table-of-contents__link toc-highlight">.PlaceNodeAt</a></li><li><a href="#TryComputePath" class="table-of-contents__link toc-highlight">.TryComputePath</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 notfenv. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/NodeNavAPI/assets/js/runtime~main.ed04bdc6.js"></script>
-<script src="/NodeNavAPI/assets/js/main.50863752.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#NavigateParams" class="table-of-contents__link toc-highlight">NavigateParams</a></li><li><a href="#Pathfinder" class="table-of-contents__link toc-highlight">Pathfinder</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#ConnectNodes" class="table-of-contents__link toc-highlight">.ConnectNodes</a></li><li><a href="#GetEdgeNear" class="table-of-contents__link toc-highlight">.GetEdgeNear</a></li><li><a href="#GetEdgesInBox" class="table-of-contents__link toc-highlight">.GetEdgesInBox</a></li><li><a href="#GetNodeNear" class="table-of-contents__link toc-highlight">.GetNodeNear</a></li><li><a href="#GetNodesInBox" class="table-of-contents__link toc-highlight">.GetNodesInBox</a></li><li><a href="#GetNodeWithIndex" class="table-of-contents__link toc-highlight">.GetNodeWithIndex</a></li><li><a href="#Parse" class="table-of-contents__link toc-highlight">.Parse</a></li><li><a href="#PathfindHumanoid" class="table-of-contents__link toc-highlight">.PathfindHumanoid</a></li><li><a href="#PlaceNodeAt" class="table-of-contents__link toc-highlight">.PlaceNodeAt</a></li><li><a href="#TryComputePath" class="table-of-contents__link toc-highlight">.TryComputePath</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 notfenv. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/NodeNavAPI/assets/js/runtime~main.e06a75db.js"></script>
+<script src="/NodeNavAPI/assets/js/main.871b3894.js"></script>
 </body>
 </html>
